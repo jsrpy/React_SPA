@@ -6,7 +6,7 @@ type of food and location!
 
 You can search by Best Match, Highest Rated, or Most Reviewed.
 
-![voracious](../img/voracious.png)
+![voracious](../img/voracious.jpg)
 
 Voracious makes use of the [Yelp API](https://www.yelp.com/developers/documentation/v3/business_search). Clicking on images of
 the search results will direct you to the corresponding restaurants' Yelp page, providing further information about that 
