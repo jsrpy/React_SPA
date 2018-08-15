@@ -17,7 +17,7 @@ A live demo is available on [https://voracious.surge.sh](https://voracious.surge
 ### Source Code
 
 All source code is provided except the Yelp API key at [src/util/Yelp.js](src/util/Yelp.js). You should register your own 
-API key at [this link](www.yelp.com/developers/v3/manage_app).
+API key at [this link](http://www.yelp.com/developers/v3/manage_app).
 
 To run this application on your local machine, follow these steps:
 
