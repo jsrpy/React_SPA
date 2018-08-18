@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       searchResults: [],
-      playlistName: 'New Test List',
+      playlistName: 'New Playlist',
       playlistTracks: []
     }
 
