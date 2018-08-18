@@ -1,7 +1,7 @@
 
 ## Impromptu
 
-Impromptu helps you create your unique Spotify playlist!
+[Impromptu](https://impromptu.surge.sh) helps you create your unique Spotify playlist!
 
 ![Impromptu](../img/impromptu.jpg)
 
