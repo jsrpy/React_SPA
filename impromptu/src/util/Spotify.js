@@ -3,7 +3,7 @@ const client_id = ''; //register your own Spotify API key
 const redirectURL = "https://impromptu.surge.sh";
 
 const Spotify = {
-    getAccessToken() {
+    getAccessToken(term) {
         if (AccessToken) {
             return AccessToken;
         } 
@@ -17,12 +17,14 @@ const Spotify = {
             window.history.pushState('Access Token', null, '/'); //Clear the parameters from the URL
             return AccessToken;
         } else {
-            window.location = `https://accounts.spotify.com/authorize?client_id=${client_id}&redirect_uri=${redirectURL}&response_type=token&scope=playlist-modify-public`
+            window.location = `https://accounts.spotify.com/authorize?client_id=${client_id}&redirect_uri=${redirectURL}&response_type=token&scope=playlist-modify-public&state=${term}`;
+            let x = window.location.href.match(/state=([^&]*)/);
+            //Spotify.search(window.location.href.match(/state=([^&]*)/))
         }
     },
 
-    search(term) {
-        AccessToken = Spotify.getAccessToken();
+    search(term) {          
+        AccessToken = Spotify.getAccessToken(term);
         
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,
     {
@@ -42,7 +44,8 @@ const Spotify = {
                         name: track.name,
                         artist: track.artists[0].name,
                         album: track.album.name,
-                        uri: track.uri
+                        uri: track.uri,
+                        preview_url: track.preview_url
                     })            
                 );
             }
