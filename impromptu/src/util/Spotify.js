@@ -1,6 +1,6 @@
 let AccessToken;
 const client_id = ''; //register your own Spotify API key
-const redirectURL = "https://impromptu.surge.sh";
+const redirectURL = "http://localhost:3000/";
 
 const Spotify = {
     getAccessToken(term) {
@@ -18,7 +18,7 @@ const Spotify = {
             return AccessToken;
         } else {
             window.location = `https://accounts.spotify.com/authorize?client_id=${client_id}&redirect_uri=${redirectURL}&response_type=token&scope=playlist-modify-public&state=${term}`;
-            let x = window.location.href.match(/state=([^&]*)/);
+            //let x = window.location.href.match(/state=([^&]*)/);
             //Spotify.search(window.location.href.match(/state=([^&]*)/))
         }
     },

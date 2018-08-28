@@ -62,17 +62,19 @@ class App extends Component {
     return (
       <div>
         <table>
-          <tr>
-            <td>
-              <small className="d1 copy">Spotify Library</small>
-            </td>
-            <td>
-              <h1>Im<span className="highlight">promp</span>tu</h1>
-            </td>
-            <td className="d3">
-              <small><a href="https://open.spotify.com/collection/playlists" target="_blank" >Spotify Library</a></small>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <small className="d1 copy">Spotify Library</small>
+              </td>
+              <td>
+                <h1>Im<span className="highlight">promp</span>tu</h1>
+              </td>
+              <td className="d3">
+                <small><a href="https://open.spotify.com/collection/playlists" target="_blank" rel="noopener noreferrer" >Spotify Library</a></small>
+              </td>
+            </tr>
+          </tbody>
         </table>
         <div className="App">
           <SearchBar onSearch={this.search} /> 
